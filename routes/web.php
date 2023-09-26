@@ -21,3 +21,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/create', [App\Http\Controllers\UrlController::class, 'createUrl'])->name('create');
 Route::get('/clickcount/{id}', [App\Http\Controllers\CountclikedurlController::class, 'countClick'])->name('clickcount');
+Route::get('/{shorturl}', [App\Http\Controllers\CountclikedurlController::class, 'shareablelink'])->name('shareablelink');

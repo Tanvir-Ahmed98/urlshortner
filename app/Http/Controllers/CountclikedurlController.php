@@ -17,4 +17,14 @@ class CountclikedurlController extends Controller
         Countclikedurl::create($data);
         return Redirect::to($request->longurl);
     }
+
+    public function shareablelink(Request $request){
+
+     return  redirect ($request->longurl);
+       
+
+
+
+
+    }
 }

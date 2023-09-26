@@ -16,7 +16,7 @@ class UrlController extends Controller
         $data = $request->all();
         $data['user_id'] = Auth::user()->id;
         $data['longurl'] = $request->longurl;
-        $data['shorturl'] = "https://shorturl/".Str::random(5);
+        $data['shorturl'] = "https://localhost/".Str::random(5);
         Url::create($data);
         return back()->with('success','data added successfully');
     }
